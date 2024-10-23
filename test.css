@@ -1,0 +1,106 @@
+.background-animation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(155, 155, 255, 0.2); /* Semi-transparent white */
+    opacity: 0.8;
+    animation: move 10s linear infinite, rotate 5s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-2000px) translateX(500px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.triangle:nth-child(1) {
+    top: 70%;
+    left: 20%;
+    border-bottom-width: 60px;
+    animation-duration: 8s;
+}
+
+.triangle:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    border-bottom-width: 100px;
+    animation-duration: 12s;
+}
+
+.triangle:nth-child(3) {
+    top: 30%;
+    left: 80%;
+    border-bottom-width: 80px;
+    animation-duration: 10s;
+}
+	i {
+    color: #FF6D51;
+	}
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #3498db, 
+                    #0A9E01, #cf23cf, #eedd44); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        }
+
+    .div {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      padding: 20px;
+      font-size: 18px;
+    }    
+    
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 120px;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #f2f2f2;
+    }
+    .moving-image {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 90px;
+      height: 90px;
+      border-radius: 50px 0 0 50px;
+      animation: moveLeft 10s linear infinite;
+    }
+
+    @keyframes moveLeft {
+      0% {
+        left: 100%;
+      }
+      100% {
+        left: -200px;
+      }
+    }
+    .image-1 { animation-delay: 0s; }
+    .image-2 { animation-delay: 2s; }
+    .image-3 { animation-delay: 4s; }
+    .image-4 { animation-delay: 6s; }
+    .image-5 { animation-delay: 8s; }
